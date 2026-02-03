@@ -113,7 +113,7 @@ vim.keymap.set("n", "<leader>du", "<cmd>DBUIToggle<cr>", { desc = "Toggle Databa
 vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
 
 -- Run Code
-vim.keymap.set("n", "<leader>r", function()
+vim.keymap.set("n", "<leader>-", function()
 	local file = vim.fn.expand("%")
 	local ext = vim.fn.expand("%:e")
 
@@ -127,6 +127,8 @@ vim.keymap.set("n", "<leader>r", function()
 		vim.cmd("split | terminal node " .. file)
 	elseif ext == "ts" then
 		vim.cmd("split | terminal ts-node " .. file)
+	elseif ext == "php" then
+		vim.cmd("split | terminal php " .. file)
 	elseif ext == "html" then
 		local file = vim.fn.expand("%:t")
 		local dir = vim.fn.expand("%:p:h")
