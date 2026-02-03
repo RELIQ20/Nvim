@@ -29,7 +29,8 @@ return {
 				"<leader>f",
 				function()
 					Snacks.picker.files({
-						cwd = "C:/Users/R3liq/code",
+						cwd = {"C:/Users/R3liq/code", 
+							"C:/xampp/htdocs"},
 					})
 				end,
 			},
