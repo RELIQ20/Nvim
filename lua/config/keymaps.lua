@@ -102,8 +102,15 @@ vim.keymap.set("n", "<leader>ds", function()
 	local widgets = require("dap.ui.widgets")
 	widgets.centered_float(widgets.scopes)
 end)
+
 -- None-ls Keymap
 vim.keymap.set("n", "<C-s>", vim.lsp.buf.format)
+
+-- SQL Key map
+-- Open the Database interface (Space + d + u)
+vim.keymap.set("n", "<leader>du", "<cmd>DBUIToggle<cr>", { desc = "Toggle Database UI" })
+-- Quickly check your code changes in Git (Space + g + g)
+vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
 
 -- Run Code
 vim.keymap.set("n", "<leader>r", function()

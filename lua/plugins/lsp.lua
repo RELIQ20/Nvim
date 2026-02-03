@@ -29,7 +29,10 @@ return {
         "lua_ls",
         "rust_analyzer",
         "pylsp",
+        "intelephense",
+        "sqlls"
       },
+
       -- THIS IS THE FIX: Move all setups into 'handlers'
       handlers = {
         -- The default handler: Applies to every server without a specific custom handler

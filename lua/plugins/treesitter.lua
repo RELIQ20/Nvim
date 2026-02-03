@@ -30,6 +30,7 @@ return {
       'tsx',
       'css',
       'html',
+      'php',
     },
     auto_install = true,
     highlight = {
