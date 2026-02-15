@@ -11,7 +11,10 @@ return {
 					null_ls.builtins.formatting.prettierd,
 					null_ls.builtins.formatting.black,
 					null_ls.builtins.diagnostics.pylint,
-				},
+					null_ls.builtins.formatting.phpcsfixer.with({
+						extra_args = { "--rules=-no_closing_tag" },
+					}),
+				}
 			})
 		end,
 	},

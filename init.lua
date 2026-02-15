@@ -27,7 +27,7 @@ require("lazy").setup({
 		require("plugins.bufferline"),
 		require("plugins.gitsigns"),
 		require("plugins.lazygit"),
-		require("plugins.database"),
+		require("plugins.database")
 	},
 	rocks = {
 		enabled = false,
