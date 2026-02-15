@@ -5,7 +5,19 @@ return {
 		lazy = false,
 		opts = {
 			bigfile = { enabled = true },
-			dashboard = { enabled = true },
+			dashboard = {
+				preset = {
+					header = [[
+███████████    ████████  █████       █████    ██████
+  ░░███░░░░░███  ███░░░░███░░███       ░░███   ███░░░░███
+   ░███    ░███ ░░░    ░███ ░███        ░███  ███    ░░███
+   ░██████████     ██████░  ░███        ░███ ░███     ░███
+   ░███░░░░░███   ░░░░░░███ ░███        ░███ ░███   ██░███
+   ░███    ░███  ███   ░███ ░███      █ ░███ ░░███ ░░████
+   █████   █████░░████████  ███████████ █████ ░░░██████░██
+  ░░░░░   ░░░░░  ░░░░░░░░  ░░░░░░░░░░░ ░░░░░    ░░░░░░ ░░]],
+				},
+			},
 			explorer = { enabled = true },
 			indent = { enabled = true },
 			input = { enabled = true },
@@ -29,11 +41,12 @@ return {
 				"<leader>f",
 				function()
 					Snacks.picker.files({
-						dirs = {"C:/Users/R3liq/code", 
-							"C:/xampp/htdocs"},
+						dirs = { "C:/Users/R3liq/code", "C:/xampp/htdocs" },
 					})
 				end,
+				desc = "Find Project Files",
 			},
 		},
+
 	},
 }
