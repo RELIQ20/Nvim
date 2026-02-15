@@ -107,10 +107,7 @@ end)
 vim.keymap.set("n", "<C-s>", vim.lsp.buf.format)
 
 -- SQL Key map
--- Open the Database interface (Space + d + u)
 vim.keymap.set("n", "<leader>du", "<cmd>DBUIToggle<cr>", { desc = "Toggle Database UI" })
--- Quickly check your code changes in Git (Space + g + g)
-vim.keymap.set("n", "<leader>gg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
 
 -- Run Code
 vim.keymap.set("n", "<leader>-", function()
@@ -130,7 +127,7 @@ vim.keymap.set("n", "<leader>-", function()
 	elseif ext == "php" then
 		vim.cmd("split | terminal php " .. file)
 	elseif ext == "html" then
-		local file = vim.fn.expand("%:t")
+		file = vim.fn.expand("%:t")
 		local dir = vim.fn.expand("%:p:h")
 		vim.fn.jobstart({ "live-server", dir, "--open=" .. file }, {
 			detach = true,
