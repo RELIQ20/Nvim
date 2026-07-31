@@ -1,9 +1,9 @@
 -- Anywhere keymaps
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<C-q>", "<cmd> wq <CR>", opts)
 vim.keymap.set("n", "<leader>x", "<cmd> q <CR>", opts)
 vim.keymap.set("n", "<C-w>", "<cmd> w <CR>", opts)
+vim.keymap.set("n", "<leader>VB", "<C-v>", opts)
 
 vim.keymap.set("i", "kj", "<Esc>", opts)
 vim.keymap.set("i", "jk", "<Esc>", opts)
@@ -108,6 +108,9 @@ vim.keymap.set("n", "<C-s>", vim.lsp.buf.format)
 
 -- SQL Key map
 vim.keymap.set("n", "<leader>du", "<cmd>DBUIToggle<cr>", { desc = "Toggle Database UI" })
+
+
+vim.keymap.set('n', '<leader>cc', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude Code' })
 
 -- Run Code
 vim.keymap.set("n", "<leader>-", function()

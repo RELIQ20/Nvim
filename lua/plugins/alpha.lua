@@ -46,6 +46,12 @@ return {
 				end,
 				desc = "Find Project Files",
 			},
+			{
+				"<leader>N",
+				function()
+					Snacks.notifier.show_history()
+				end
+			}
 		},
 
 	},

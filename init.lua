@@ -22,12 +22,13 @@ require("lazy").setup({
 		require("plugins.none-ls"),
 		require("plugins.autocomplete"),
 		require("plugins.alpha"),
-		require("plugins.debugger"), --need to configure
+		-- require("plugins.debugger"), --need to configure
 		require("plugins.misc"),
 		require("plugins.bufferline"),
 		require("plugins.gitsigns"),
 		require("plugins.lazygit"),
-		require("plugins.database")
+		require("plugins.database"),
+		require("plugins.ai")
 	},
 	rocks = {
 		enabled = false,
