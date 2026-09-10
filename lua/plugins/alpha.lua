@@ -40,9 +40,7 @@ return {
 			{
 				"<leader>f",
 				function()
-					Snacks.picker.files({
-						dirs = { "C:/Users/R3liq/code", "C:/xampp/htdocs" },
-					})
+					Snacks.picker.files({cwd = "~/Code"})
 				end,
 				desc = "Find Project Files",
 			},
