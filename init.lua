@@ -28,7 +28,8 @@ require("lazy").setup({
 		require("plugins.gitsigns"),
 		require("plugins.lazygit"),
 		require("plugins.database"),
-		require("plugins.ai")
+		require("plugins.ai"),
+		require("plugins.obsidian")
 	},
 	rocks = {
 		enabled = false,

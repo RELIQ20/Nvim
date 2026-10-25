@@ -129,6 +129,10 @@ vim.keymap.set("n", "<leader>-", function()
 		vim.cmd("split | terminal ts-node " .. file)
 	elseif ext == "php" then
 		vim.cmd("split | terminal php " .. file)
+	elseif ext == "java" then
+		local dir = vim.fn.expand("%:p:h")
+		local classname = vim.fn.expand("%:t:r")
+		vim.cmd("split | terminal javac " .. file .. " && java -cp " .. dir .. " " .. classname)
 	elseif ext == "html" then
 		file = vim.fn.expand("%:t")
 		local dir = vim.fn.expand("%:p:h")
